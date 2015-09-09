@@ -8,3 +8,9 @@
 ### 特性
 
 * 支持 Server-render
+
+
+### 运行
+
+* npm install -g babel webpack
+* npm start

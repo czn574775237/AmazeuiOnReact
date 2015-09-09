@@ -1,6 +1,6 @@
 let webpack = require('webpack');
 let path = require('path');
-let SERVER_PORT = 5000;
+let SERVER_PORT = 7000;
 let DEV_PORT = SERVER_PORT + 1;
 
 module.exports = {
@@ -28,10 +28,12 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'react-hot-loader!babel-loader!eslint-loader',
+        loader: 'react-hot!babel!eslint',
         exclude: /node_modules/,
         include: [
-          path.resolve(__dirname, './app')
+          path.resolve(__dirname, 'app'),
+          path.resolve(__dirname, 'components'),
+          path.resolve(__dirname, 'styles')
         ]
       },
       {
@@ -59,7 +61,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './build'),
     filename: 'app.bundle.js',
-    publicPath: '/build/'
   },
 
   externals: {
