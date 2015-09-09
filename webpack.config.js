@@ -32,8 +32,7 @@ module.exports = {
         exclude: /node_modules/,
         include: [
           path.resolve(__dirname, 'app'),
-          path.resolve(__dirname, 'components'),
-          path.resolve(__dirname, 'styles')
+          path.resolve(__dirname, 'components')
         ]
       },
       {

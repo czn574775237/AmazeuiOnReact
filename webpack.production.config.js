@@ -4,8 +4,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 module.exports = {
   entry: {
-     // Your appʼs entry point
-    main: './app/main',
+    amazeui: './components/index',
     vendor: [
       'react', 'react-router'
     ]

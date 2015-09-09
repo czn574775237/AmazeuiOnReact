@@ -30,7 +30,11 @@ export default class Alert extends React.Component {
           closable ?
           <button type="button" className="am-close"
             onClick={this._handleClick.bind(this)}>
-            { closeText ? closeText : <span>&times;</span> }
+            {
+              closeText
+              ? <b style={{fontSize: '12px'}}>{closeText}</b>
+              : <b>&times;</b>
+            }
           </button> :
           null
         }
