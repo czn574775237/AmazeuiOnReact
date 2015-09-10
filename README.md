@@ -11,6 +11,7 @@
 
 
 ### 运行
-
-* npm install -g babel webpack
+* npm install
 * npm start
+
+浏览器访问 http://localhost:7001

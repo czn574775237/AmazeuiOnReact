@@ -24,7 +24,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'react-hot-loader!babel-loader!eslint-loader',
+        loader: 'react-hot!babel!eslint',
         exclude: /node_modules/,
         include: [
           path.resolve(__dirname, './app')
@@ -33,27 +33,27 @@ module.exports = {
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract(
-          'style-loader',
-          'css-loader!autoprefixer-loader!less-loader'
+          'style',
+          'css!autoprefixer!less'
         )
       },
       {
         test: /\.less$/,
         loader:  ExtractTextPlugin.extract(
-          'style-loader',
-          'css-loader!autoprefixer-loader!less-loader'
+          'style',
+          'css!autoprefixer!less'
         )
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader?limit=10000'
+        loader: 'file?limit=10000'
       },
       {
         test: /\.jpe?g$|\.gif$|\.png$/,
-        loader: 'file-loader?limit=10000'
+        loader: 'file?limit=10000'
       },
       { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader?limit=10000'
+        loader: 'file?limit=10000'
       }
     ]
   },

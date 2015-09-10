@@ -31,28 +31,28 @@ module.exports = {
         loader: 'react-hot!babel!eslint',
         exclude: /node_modules/,
         include: [
-          path.resolve(__dirname, 'app'),
-          path.resolve(__dirname, 'components')
+          path.resolve(__dirname, './app'),
+          path.resolve(__dirname, './components')
         ]
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader!autoprefixer-loader'
+        loader: 'style!css!autoprefixer'
       },
       {
         test: /\.less$/,
-        loader: 'style-loader!css-loader!autoprefixer-loader!less-loader'
+        loader: 'style!css!autoprefixer!less'
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader?limit=10000'
+        loader: 'file?limit=10000'
       },
       {
         test: /\.jpe?g$|\.gif$|\.png$/,
-        loader: 'file-loader?limit=100000'
+        loader: 'file?limit=100000'
       },
       { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader?limit=10000'
+        loader: 'file?limit=10000'
       }
     ]
   },
